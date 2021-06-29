@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.davidglez.a6_28_2021_seccion3udemyandroidux_ui">
+    package="com.alain.cursos.mdcomponents">
 
     <application
         android:allowBackup="true"
@@ -8,7 +8,15 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.6282021Seccion3UdemyAndroidUXUI">
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".StaticActivity"
+            android:label="@string/title_activity_static"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".ScrollActivity"
+            android:label="@string/title_activity_scroll"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
