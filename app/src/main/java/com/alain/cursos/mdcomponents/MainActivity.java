@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.alain.cursos.mdcomponents.Fragments.BottomNavigationBarFragment;
 import com.alain.cursos.mdcomponents.Fragments.SnackBarFragment;
+import com.alain.cursos.mdcomponents.Fragments.TextFieldFragment;
 import com.alain.cursos.mdcomponents.adapters.ComponentAdapter;
 import com.alain.cursos.mdcomponents.utils.Component;
 import com.alain.cursos.mdcomponents.utils.Constants;
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         mAdapter.add(ButtonFragment.getmInstance());
         mAdapter.add(BottomNavigationBarFragment.getmInstance());
         mAdapter.add(SnackBarFragment.getmInstance());
+        mAdapter.add(TextFieldFragment.getmInstance());
     }
 
     private void configRecyclerView() {
