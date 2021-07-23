@@ -2,7 +2,6 @@ package com.alain.cursos.mdcomponents;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
@@ -10,20 +9,20 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.alain.cursos.mdcomponents.Fragments.BottomNavigationBarFragment;
 import com.alain.cursos.mdcomponents.Fragments.CardFragment;
 import com.alain.cursos.mdcomponents.Fragments.CheckBoxFragment;
+import com.alain.cursos.mdcomponents.Fragments.AlertDialogFragment;
 import com.alain.cursos.mdcomponents.Fragments.FloatingActionButtonFragment;
+import com.alain.cursos.mdcomponents.Fragments.MenuFragment;
 import com.alain.cursos.mdcomponents.Fragments.SnackBarFragment;
 import com.alain.cursos.mdcomponents.Fragments.TextFieldFragment;
 import com.alain.cursos.mdcomponents.adapters.ComponentAdapter;
 import com.alain.cursos.mdcomponents.utils.Component;
 import com.alain.cursos.mdcomponents.utils.Constants;
 import com.alain.cursos.mdcomponents.utils.OnClickListener;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity implements OnClickListener {
 
@@ -51,6 +50,9 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         mAdapter.add(FloatingActionButtonFragment.getmInstance());
         mAdapter.add(CheckBoxFragment.getmInstance());
         mAdapter.add(CardFragment.getmInstance());
+        mAdapter.add(MenuFragment.getmInstance());
+        mAdapter.add(AlertDialogFragment.getmInstance());
+        mAdapter.reverse();
     }
 
     private void configRecyclerView() {
@@ -71,4 +73,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         intent.putExtra(Constants.ARG_NAME, component.getName());
         startActivity(intent);
     }
+
+
 }

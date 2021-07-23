@@ -14,5 +14,10 @@
     <dimen name="common_padding_non">0dp</dimen>
     <dimen name="common_padding_img_size">80dp</dimen>
     <dimen name="card_baseline_topTitle">44dp</dimen>
+    <dimen name="card_baseline_secondary">32dp</dimen>
+    <dimen name="card_baseline_message">26dp</dimen>
+    <dimen name="card_baseline_subtitle">36dp</dimen>
+    <dimen name="card_padding_container_variant">14dp</dimen>
+    <dimen name="card_padding_container_variant2">20dp</dimen>
 
 </resources>
