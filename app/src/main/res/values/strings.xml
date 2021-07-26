@@ -145,4 +145,7 @@
     </string>
     <string name="menu_popup_menu">Popup menu</string>
     <string name="menu_hint_autocomplete">AutoComplete</string>
+    <string name="app_bar_bottom">AppBar Bottom</string>
+    <string name="status_top">AppBar Top</string>
+    <string name="app_bar_top">AppBar Top</string>
 </resources>

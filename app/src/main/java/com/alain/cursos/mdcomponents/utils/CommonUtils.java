@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.alain.cursos.mdcomponents.ButtonFragment;
+import com.alain.cursos.mdcomponents.Fragments.AppBarFragment;
 import com.alain.cursos.mdcomponents.Fragments.BottomNavigationBarFragment;
 import com.alain.cursos.mdcomponents.Fragments.CardFragment;
 import com.alain.cursos.mdcomponents.Fragments.CheckBoxFragment;
@@ -63,6 +64,9 @@ public class CommonUtils {
                 break;
             case AlertDialogFragment.TAG:
                 fragment = new AlertDialogFragment();
+                break;
+            case AppBarFragment.TAG:
+                fragment = new AppBarFragment();
                 break;
 
         }
