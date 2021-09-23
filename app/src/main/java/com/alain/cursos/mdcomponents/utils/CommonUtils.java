@@ -19,6 +19,7 @@ import com.alain.cursos.mdcomponents.Fragments.CheckBoxFragment;
 import com.alain.cursos.mdcomponents.Fragments.AlertDialogFragment;
 import com.alain.cursos.mdcomponents.Fragments.FloatingActionButtonFragment;
 import com.alain.cursos.mdcomponents.Fragments.MenuFragment;
+import com.alain.cursos.mdcomponents.Fragments.NavigationDrawerFragment;
 import com.alain.cursos.mdcomponents.Fragments.PickerFragment;
 import com.alain.cursos.mdcomponents.Fragments.SnackBarFragment;
 import com.alain.cursos.mdcomponents.Fragments.TextFieldFragment;
@@ -71,6 +72,9 @@ public class CommonUtils {
                 break;
             case PickerFragment.TAG:
                 fragment = new PickerFragment();
+                break;
+            case NavigationDrawerFragment.TAG:
+                fragment = new NavigationDrawerFragment();
                 break;
 
         }

@@ -13,6 +13,7 @@ import com.alain.cursos.mdcomponents.Fragments.CheckBoxFragment;
 import com.alain.cursos.mdcomponents.Fragments.AlertDialogFragment;
 import com.alain.cursos.mdcomponents.Fragments.FloatingActionButtonFragment;
 import com.alain.cursos.mdcomponents.Fragments.MenuFragment;
+import com.alain.cursos.mdcomponents.Fragments.NavigationDrawerFragment;
 import com.alain.cursos.mdcomponents.Fragments.PickerFragment;
 import com.alain.cursos.mdcomponents.Fragments.SnackBarFragment;
 import com.alain.cursos.mdcomponents.Fragments.TextFieldFragment;
@@ -56,6 +57,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         mAdapter.add(AlertDialogFragment.getmInstance());
         mAdapter.add(AppBarFragment.getmInstance());
         mAdapter.add(PickerFragment.getmInstance());
+        mAdapter.add(NavigationDrawerFragment.getmInstance());
         mAdapter.reverse();
     }
 
@@ -63,9 +65,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         recyclerView.setAdapter(mAdapter);
     }
 
-    /*
-    * OnClickListener
-    * */
     @Override
     public void onClick(Component component) {
         Intent intent;
