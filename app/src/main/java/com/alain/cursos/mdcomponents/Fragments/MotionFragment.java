@@ -12,14 +12,17 @@ import androidx.transition.TransitionManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
 import com.alain.cursos.mdcomponents.R;
 import com.alain.cursos.mdcomponents.utils.Component;
 import com.alain.cursos.mdcomponents.utils.Constants;
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.transition.MaterialArcMotion;
 import com.google.android.material.transition.MaterialContainerTransform;
+import com.google.android.material.transition.MaterialSharedAxis;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -38,6 +41,13 @@ public class MotionFragment extends Fragment {
     FloatingActionButton view_start;
     @BindView(R.id.coordinatorMain)
     CoordinatorLayout container_main;
+    @BindView(R.id.view_in)
+    LinearLayout view_in;
+    @BindView(R.id.view_out)
+    FrameLayout view_out;
+    @BindView(R.id.btnCustom)
+    MaterialButton btnCustom;
+
 
     public static Component getmInstance(){
         mInstance = new Component();
@@ -62,6 +72,8 @@ public class MotionFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_motion, container, false);
         unbinder = ButterKnife.bind(this, view);
+
+        btnCustom.setText("Next");
         return view;
     }
 
@@ -96,5 +108,25 @@ public class MotionFragment extends Fragment {
                 view_end.setVisibility(View.VISIBLE);
                 break;
         }
+    }
+
+    @OnClick(R.id.btnCustom)
+    public void onNextClicked(){
+        MaterialSharedAxis sharedAxis = new MaterialSharedAxis(MaterialSharedAxis.X, true);
+        sharedAxis.setDuration(1000L);
+        TransitionManager.beginDelayedTransition(view_end, sharedAxis);
+
+        view_out.setVisibility(View.GONE);
+        view_in.setVisibility(View.VISIBLE);
+    }
+
+    @OnClick(R.id.btn_back)
+    public void onBackClicked(){
+        MaterialSharedAxis sharedAxis = new MaterialSharedAxis(MaterialSharedAxis.X, false);
+        sharedAxis.setDuration(1000L);
+        TransitionManager.beginDelayedTransition(view_end, sharedAxis);
+
+        view_in.setVisibility(View.GONE);
+        view_out.setVisibility(View.VISIBLE);
     }
 }
