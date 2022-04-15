@@ -40,24 +40,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/status_outlined_enabled"
+        app:suffixText="@string/text_field_suffix"
         android:layout_marginTop="@dimen/common_padding_default"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSuffix"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="numberDecimal"/>
+            android:gravity="end"
+            android:inputType="textEmailAddress"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/status_outlined_dense_enabled"
+        app:prefixText="$"
         android:layout_marginTop="@dimen/common_padding_default"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"/>
+            android:inputType="numberDecimal"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout

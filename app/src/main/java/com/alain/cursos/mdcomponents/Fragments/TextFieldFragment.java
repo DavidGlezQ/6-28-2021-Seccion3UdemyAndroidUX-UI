@@ -6,9 +6,11 @@ import androidx.fragment.app.Fragment;
 
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.alain.cursos.mdcomponents.R;
 import com.alain.cursos.mdcomponents.utils.Component;
@@ -82,6 +84,13 @@ public class TextFieldFragment extends Fragment {
                 }
             }
         });
+
+        getActivity().findViewById(R.id.fab).setOnClickListener(view1 -> {
+            Log.i("Suffix", ((TextInputEditText) getActivity().findViewById(R.id.etSuffix)).getText().toString()
+                    + getString(R.string.text_field_suffix));
+            Toast.makeText(getContext(), "Suffix: " + ((TextInputEditText) getActivity().findViewById(R.id.etSuffix)).getText().toString()
+                    + getString(R.string.text_field_suffix), Toast.LENGTH_LONG).show();
+                });
 
         return view;
     }

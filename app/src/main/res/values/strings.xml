@@ -154,4 +154,5 @@
     <string name="dialog_negative">Negative Button</string>
     <string name="navigation_drawer_modal">Modal Drawer</string>
     <string name="navigation_drawer_bottom">Bottom Drawer</string>
+    <string name="text_field_suffix">\@gmail.com</string>
 </resources>
