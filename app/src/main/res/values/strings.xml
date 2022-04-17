@@ -155,4 +155,16 @@
     <string name="navigation_drawer_modal">Modal Drawer</string>
     <string name="navigation_drawer_bottom">Bottom Drawer</string>
     <string name="text_field_suffix">\@gmail.com</string>
+    <string name="sheets_bottom_standard">Standard Bottom</string>
+    <string name="sheets_bottom_modal">Modal Bottom</string>
+    <string name="sheets_bottom_standard_place_title">Cursos Android ANT</string>
+    <string name="sheets_bottom_standard_place_type">Courses Online</string>
+    <string name="sheets_bottom_standard_place_link">WebSite</string>
+    <string name="sheets_bottom_standard_place_call">Call</string>
+    <string name="sheets_bottom_standard_place_save">Save</string>
+    <string name="sheets_bottom_standard_place_timeline">2 days ago</string>
+    <string name="sheets_bottom_standard_place_address">44790  Main Street</string>
+    <string name="sheets_bottom_standard_place_schedule">Close</string>
+    <string name="sheets_bottom_standard_place_make_question">Ask something</string>
+    <string name="hint_username">Username</string>
 </resources>

@@ -22,6 +22,7 @@ import com.alain.cursos.mdcomponents.Fragments.MenuFragment;
 import com.alain.cursos.mdcomponents.Fragments.MotionFragment;
 import com.alain.cursos.mdcomponents.Fragments.NavigationDrawerFragment;
 import com.alain.cursos.mdcomponents.Fragments.PickerFragment;
+import com.alain.cursos.mdcomponents.Fragments.SheetBottomFragment;
 import com.alain.cursos.mdcomponents.Fragments.SnackBarFragment;
 import com.alain.cursos.mdcomponents.Fragments.TextFieldFragment;
 
@@ -79,6 +80,9 @@ public class CommonUtils {
                 break;
             case MotionFragment.TAG:
                 fragment = new MotionFragment();
+                break;
+            case SheetBottomFragment.TAG:
+                fragment = new SheetBottomFragment();
                 break;
 
         }

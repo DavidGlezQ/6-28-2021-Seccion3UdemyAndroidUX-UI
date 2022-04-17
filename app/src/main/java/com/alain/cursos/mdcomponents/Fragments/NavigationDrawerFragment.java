@@ -3,6 +3,7 @@ package com.alain.cursos.mdcomponents.Fragments;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -62,12 +63,15 @@ public class NavigationDrawerFragment extends Fragment {
 
     @OnClick({R.id.btnModal, R.id.btnBottom})
     public void onViewClicked(View view){
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
         switch (view.getId()){
             case R.id.btnModal:
                 ModalNavigationDrawerFragment modalNavigationDrawerFragment = new ModalNavigationDrawerFragment();
-                modalNavigationDrawerFragment.show(getFragmentManager().beginTransaction(), ModalNavigationDrawerFragment.TAG);
+                modalNavigationDrawerFragment.show(transaction, ModalNavigationDrawerFragment.TAG);
                 break;
             case R.id.btnBottom:
+                BottomNavigationDrawerFragment bottomNavigationDrawerFragment = new BottomNavigationDrawerFragment();
+                bottomNavigationDrawerFragment.show(transaction, BottomNavigationDrawerFragment.TAG);
                 break;
 
         }

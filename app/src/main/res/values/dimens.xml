@@ -19,5 +19,9 @@
     <dimen name="card_baseline_subtitle">36dp</dimen>
     <dimen name="card_padding_container_variant">14dp</dimen>
     <dimen name="card_padding_container_variant2">20dp</dimen>
+    <dimen name="sheet_bottom_standard_peek_height">80dp</dimen>
+    <dimen name="card_img_size">80dp</dimen>
+    <dimen name="item_img_size">50dp</dimen>
+    <dimen name="img_bar_size">40dp</dimen>
 
 </resources>
